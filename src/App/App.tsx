@@ -1,12 +1,13 @@
-import Calendar from '../Calendar/Calendar';
 import './App.css';
 import { BrowserRouter as Router, NavLink, Switch, Route, Redirect } from 'react-router-dom';
 import styled from 'styled-components'
 
+import Parser from '../components/Parser/Parser';
+import Calendar from '../components/Calendar/Calendar';
+
 import { Colors } from './colors';
-import Parser from '../Parser/Parser';
-import { useState } from 'react';
 import { IAppState } from './app-state.interface';
+import { useLocalStorage } from '../hooks/use-local-storage';
 
 const StyledNavLink = styled(NavLink)`
   padding: 5px;
@@ -14,7 +15,7 @@ const StyledNavLink = styled(NavLink)`
 
 
 const App = () => {
-  const [appState, setAppState] = useState<IAppState>({
+  const [appState, setAppState] = useLocalStorage<IAppState>('state', {
     files: [],
     calendarMessages: [],
     calendarCalls: [],

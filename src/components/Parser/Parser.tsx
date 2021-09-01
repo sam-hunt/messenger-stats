@@ -1,7 +1,7 @@
 import { ChangeEvent } from 'react';
 import styled from 'styled-components';
 
-import { IParsedFile, IAppState } from '../App/app-state.interface';
+import { IParsedFile, IAppState } from '../../App/app-state.interface';
 import { IMessengerDataFile } from './messenger-data-file.interface';
 import { parseCalendarCalls } from './parse-calendar-calls';
 import { parseCalendarMessages } from './parse-calendar-messages';

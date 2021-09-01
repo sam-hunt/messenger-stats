@@ -1,5 +1,5 @@
 import { ResponsiveCalendar } from '@nivo/calendar'
-import { ICalendarData } from '../App/app-state.interface';
+import { ICalendarData } from '../../App/app-state.interface';
 
 interface ICalendarProps {
   data: ICalendarData | undefined;

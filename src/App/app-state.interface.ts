@@ -1,4 +1,4 @@
-import { IMessengerDataFile } from "../Parser/messenger-data-file.interface";
+import { IMessengerDataFile } from "../components/Parser/messenger-data-file.interface";
 
 interface ICalendarDatum {
     day: string;

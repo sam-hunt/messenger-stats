@@ -1,4 +1,4 @@
-import { ICalendarData } from '../App/app-state.interface';
+import { ICalendarData } from '../../App/app-state.interface';
 import { IMessengerDataFile } from './messenger-data-file.interface';
 
 export const parseCalendarMessages = (messengerDataFiles: IMessengerDataFile[] | undefined): ICalendarData => {
