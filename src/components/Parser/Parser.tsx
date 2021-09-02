@@ -35,7 +35,7 @@ const Parser = ({ setAppState, appState }: IParserProps) => {
                 messengerDataFile: datafile,
                 messageCount: datafile.messages.length,
                 callCount: datafile.messages.filter(message => message.type === 'Call').length,
-                totalCallLength: datafile.messages.reduce((acc, val) => (acc + (val?.call_duration || 0)), 0),
+                totalCallMinutes: datafile.messages.reduce((acc, val) => (acc + (val?.call_duration || 0)), 0),
             }
             newAppState.files.push(parsedFile);
         }
@@ -64,7 +64,7 @@ const Parser = ({ setAppState, appState }: IParserProps) => {
                     </span>
                     <span style={{ color: 'blue', fontWeight: 'bold' }}>
                         Total calls: {file.callCount}<br />
-                        Total call length: {((file?.totalCallLength || 0) / 60).toFixed(0)} hours<br />
+                        Total call length: {((file?.totalCallMinutes || 0) / 60).toFixed(0)} minutes<br />
                     </span>
                     Size: {Math.ceil(file.sizeBytes / 1024)} KB<br />
                     Last modified {new Date(file.lastModified).toDateString()}<br />

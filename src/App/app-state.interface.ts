@@ -15,7 +15,7 @@ export interface IParsedFile {
     messengerDataFile: IMessengerDataFile;
     messageCount: number;
     callCount: number;
-    totalCallLength: number;
+    totalCallMinutes: number;
 }
 
 export interface IAppState {
