@@ -1,6 +1,6 @@
 # Messenger Stats
 
-A small browser app for visualising message and call history with friends and family.
+A small browser app for visualising message and call history with friends and family.  
 Download your messenger history data in JSON format from facebook to get started.
 
 ## Available Scripts
@@ -24,4 +24,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-

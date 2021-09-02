@@ -55,20 +55,20 @@ const Parser = ({ setAppState, appState }: IParserProps) => {
             {appState.files.map((file, i) =>
                 <div key={i}>
                     <h3>{file.name}</h3>
-                    <span style={{color: 'blueviolet', fontWeight: 'bold'}}>
-                        Title: {file.messengerDataFile?.title}<br/>
-                        Participants: {file.messengerDataFile?.participants.map(p => p.name).join(', ')}<br/>
+                    <span style={{ color: 'blueviolet', fontWeight: 'bold' }}>
+                        Title: {file.messengerDataFile?.title}<br />
+                        Participants: {file.messengerDataFile?.participants.map(p => p.name).join(', ')}<br />
                     </span>
-                    <span style={{color: 'green', fontWeight: 'bold'}}>
-                        Total messages: {file.messageCount}<br/>
+                    <span style={{ color: 'green', fontWeight: 'bold' }}>
+                        Total messages: {file.messageCount}<br />
                     </span>
-                    <span style={{color: 'blue', fontWeight: 'bold'}}>
-                        Total calls: {file.callCount}<br/>
-                        Total call length: {((file?.totalCallLength || 0) / 60).toFixed(0)} hours<br/>
+                    <span style={{ color: 'blue', fontWeight: 'bold' }}>
+                        Total calls: {file.callCount}<br />
+                        Total call length: {((file?.totalCallLength || 0) / 60).toFixed(0)} hours<br />
                     </span>
-                    Size: {Math.ceil(file.sizeBytes/1024)} KB<br/>
-                    Last modified {new Date(file.lastModified).toDateString()}<br/>
-                    <br/><br/>
+                    Size: {Math.ceil(file.sizeBytes / 1024)} KB<br />
+                    Last modified {new Date(file.lastModified).toDateString()}<br />
+                    <br /><br />
                 </div>
             )}
         </>
